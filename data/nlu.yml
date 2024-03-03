@@ -1,0 +1,30 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey there
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+
+- intent: book_appointment
+  examples: |
+    - I want to schedule an appointment
+    - Can you book an appointment for me?
+    - I need to see the doctor
+
+- intent: cancel_appointment
+  examples: |
+    - I need to cancel my appointment
+    - Cancel my appointment
+    - I want to reschedule my visit
+
+- intent: reschedule_appointment
+  examples: |
+    - I need to change my appointment
+    - Reschedule my visit
+    - Can I change my appointment time?

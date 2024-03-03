@@ -1,0 +1,37 @@
+version: "3.0"
+
+stories:
+- story: User greets and books an appointment
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_appointment
+  - action: action_check_doctor_availability
+  - action: utter_ask_appointment_slot
+  - intent: inform
+    entities:
+    - time: "2pm"
+  - action: utter_confirm_appointment
+  - action: action_save_appointment
+
+- story: User greets and cancels an appointment
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: cancel_appointment
+  - action: action_cancel_appointment
+  - action: utter_goodbye
+
+- story: User greets and reschedules an appointment
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: reschedule_appointment
+  - action: action_check_doctor_availability
+  - action: utter_ask_appointment_slot
+  - intent: inform
+    entities:
+    - time: "4pm"
+  - action: utter_confirm_appointment
+  - action: action_reschedule_appointment
+  - action: utter_goodbye

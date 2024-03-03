@@ -1,0 +1,13 @@
+CREATE TABLE doctor_availability (
+    id INTEGER PRIMARY KEY,
+    doctor_id TEXT,
+    time_slot TEXT,
+    available INTEGER
+);
+
+INSERT INTO doctor_availability (doctor_id, time_slot, available)
+VALUES ('Dr. Smith', '10:00 AM', 1),
+       ('Dr. Smith', '02:00 PM', 1),
+       ('Dr. Smith', '04:00 PM', 0),
+       ('Dr. Jones', '09:00 AM', 1),
+       ('Dr. Jones', '11:00 AM', 0);

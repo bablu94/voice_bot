@@ -1,0 +1,35 @@
+
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - book_appointment
+  - cancel_appointment
+  - reschedule_appointment
+
+slots:
+  doctor_id:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: doctor_id
+
+actions:
+  - action_check_doctor_availability
+
+templates:
+  utter_greet:
+    - text: "Hello, thanks for calling Dr. Archer’s office. How may I assist you today?"
+
+  utter_goodbye:
+    - text: "Goodbye! See you soon."
+
+  utter_ask_appointment_slot:
+    - text: "I have the following availability: {available_slots}. When would you like to come in?"
+
+  utter_confirm_appointment:
+    - text: "Okay great! Can I get your phone number and Name?"
+
+  utter_appointment_set:
+    - text: "Awesome. I have you set up for that time. To cancel or reschedule please call us again. See you soon."
